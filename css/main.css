@@ -1,0 +1,186 @@
+/*
+Biro theme author's custom style v 1.0.0 by "Studio K" https://www.studiok.com
+*/
+/* ===================
+       VARIABLE
+  =================== */
+/* =========================================
+   Author's custom styles
+   ========================================= */
+/* line 13, ../sass/main.scss */
+html {
+  font-size: 1em;
+  line-height: 1.4; }
+
+@media only screen and (min-width: 1224px) {
+  /* ===============
+      Maximal Width
+     =============== */
+  /* line 23, ../sass/main.scss */
+  .wrapper {
+    width: 1080px;
+    /* 1200px - 10% for margins */
+    margin: 0 auto; } }
+/* ===================
+       BODY
+  =================== */
+/* line 62, ../sass/main.scss */
+.main-container {
+  padding-top: 70px; }
+
+/* line 66, ../sass/main.scss */
+.main {
+  padding: 30px 0;
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px; }
+
+/* ===================
+    ALL: Black Orange Theme
+   =================== */
+/* line 80, ../sass/main.scss */
+.header-container {
+  border-bottom: 3px solid #f16529; }
+
+/* line 84, ../sass/main.scss */
+.footer-container {
+  border-top: 3px solid #f16529; }
+
+/* ===================
+        HEADER
+   =================== */
+/* line 91, ../sass/main.scss */
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 67px; }
+
+/* line 97, ../sass/main.scss */
+.img-holder {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 9px;
+  float: left; }
+
+/* line 105, ../sass/main.scss */
+.header .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+/* ===================
+        NAVIGATION
+   =================== */
+/*------- Primary ------------*/
+/* line 115, ../sass/main.scss */
+nav {
+  float: right; }
+
+/* line 118, ../sass/main.scss */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 22px; }
+
+/* line 125, ../sass/main.scss */
+nav ul li {
+  text-align: center;
+  /*font-size: 14px;*/
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px; }
+
+/* line 130, ../sass/main.scss */
+header > nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 20px; }
+
+/* line 141, ../sass/main.scss */
+nav a:hover {
+  text-decoration: underline; }
+
+/*------ Secondary ---------*/
+/* line 148, ../sass/main.scss */
+nav ul li ul li a {
+  padding: 15px; }
+
+/* line 152, ../sass/main.scss */
+nav ul li ul {
+  display: none;
+  width: 200px; }
+
+/* line 157, ../sass/main.scss */
+nav ul li:hover ul {
+  display: inline-grid; }
+
+/* line 161, ../sass/main.scss */
+ul li.menu-item-has-children > a:after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit; }
+
+/* ===================
+      ARTICLE
+ =================== */
+/* ===================
+      ASIDE
+ =================== */
+/* ===================
+      FOOTER
+ =================== */
+/* line 195, ../sass/main.scss */
+.footer-container {
+  height: 67px; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 203, ../sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* line 208, ../sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 219, ../sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* line 229, ../sass/main.scss */
+.invisible {
+  visibility: hidden; }
+
+/* line 233, ../sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 239, ../sass/main.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 243, ../sass/main.scss */
+.clearfix {
+  *zoom: 1; }
+
+/*# sourceMappingURL=main.css.map */

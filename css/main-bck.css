@@ -1,0 +1,240 @@
+/*
+Biro theme author's custom style v 1.0.0 by "Studio K" https://www.studiok.com
+*/
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html {
+    color: #000;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width: 1224px) {
+/* ===============
+    Maximal Width
+   =============== */
+    .wrapper {
+        width: 1080px; /* 1200px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ===================
+       BODY
+  =================== */
+body {
+    background-color: black;
+    /*background-image: url(../img/bar-inside.jpg);
+    background-size: cover;*/
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    color: #e5e5e5;
+}
+body::before {
+    content: "";
+    background-image: url(../img/stocksnap.jpg);
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+
+.main-container{
+    padding-top: 70px;
+}
+
+.main {
+    padding: 30px 0;
+    font-family: 'Comfortaa', cursive; font-size: 14px;;
+}
+
+/* ===================
+    ALL: Black Orange Theme
+   =================== */
+
+.header-container,
+.footer-container{
+    background: #000;
+}
+
+.header-container {
+    border-bottom: 3px solid #f16529;
+}
+
+.footer-container{
+    border-top: 3px solid #f16529;
+}
+
+/* ===================
+        HEADER
+   =================== */
+.header-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 67px;
+}
+.img-holder {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 9px;
+    float: left;
+}
+
+.header .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/* ===================
+        NAVIGATION
+   =================== */
+/*------- Primary ------------*/
+nav {
+    float: right;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, 100px );
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 22px;
+}
+nav ul li{
+    text-align: center;
+    /*font-size: 14px;*/
+    font-family: 'Comfortaa', cursive; font-size: 12px;;
+}
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+    color: #e5e5e5;
+}
+
+nav ul li a:hover{
+    color: #f16529;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/*------ Secondary ---------*/
+
+nav ul li ul li a {
+    padding: 15px;
+
+}
+nav ul li ul{
+    display: none;
+    width: 200px;
+    background-color: black;
+}
+nav ul li:hover ul{
+    display: inline-grid;
+
+}
+ul li.menu-item-has-children>a:after{
+    content: " \f0d7";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit
+}
+
+
+/* ===================
+      ARTICLE
+ =================== */
+
+
+
+
+
+
+ /* ===================
+       ASIDE
+  =================== */
+
+
+
+
+
+
+
+/* ===================
+      FOOTER
+ =================== */
+.footer-container footer {
+    color: white;
+    /*padding: 20px 0;*/
+    /*height: 67px;*/
+}
+.footer-container {
+    height: 67px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

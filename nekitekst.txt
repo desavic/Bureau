@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 Nema neki
-=======
-Nema neki 
->>>>>>> fd7b695cfc010167892ce26feecd6b6a33b75ad8
 
 Ovo je samo proba da vidimo sta se desava kada kreiras fajl na github.com.
 
 Mogu li da ga skinem u atomu ili ne?
-<<<<<<< HEAD
 
 Mogu, mogu i da ga preuredim
 
 A mogu jos jednom da ga izmenim
 
 Treca promena
-=======
->>>>>>> fd7b695cfc010167892ce26feecd6b6a33b75ad8

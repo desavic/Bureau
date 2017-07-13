@@ -9,3 +9,5 @@ Mogu, mogu i da ga preuredim
 A mogu jos jednom da ga izmenim
 
 Treca promena
+
+promena pred brisanje celog fajla

@@ -2,3 +2,6 @@ Proba github desktop
 Dodat novi red
 Dodat novi red u novom "desctop branchu"
 Cetvrti red u "master"
+
+Cetvrti red u "desctop"
+

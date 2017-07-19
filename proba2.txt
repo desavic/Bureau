@@ -1,9 +1,0 @@
-Proba github desktop
-Dodat novi red
-Dodat novi red u novom "desctop branchu"
-Cetvrti red u "master"
-
-Cetvrti red u "desctop"
-sedmi red u master
-u fajlu nekitekst.txt uradjene dve promene pre nego bude obrisan
-123

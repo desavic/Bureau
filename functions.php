@@ -8,7 +8,7 @@ function biro_enqueue_scripts() {
 
 	wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', 'array()', '7.0.0', 'all');
 	wp_enqueue_style('comfortaa', 'https://fonts.googleapis.com/css?family=Comfortaa:400,700', 'array()', '', 'all');
-	wp_enqueue_style('opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600i', 'array()', '$ver', 'all');
+	wp_enqueue_style('opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600i', 'array()', '', 'all');
 	wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/main.css', 'array()', '1.0.0', 'all');
 
 	wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/372ea4f277.js', 'array()', '', false);
@@ -27,72 +27,12 @@ function biro_theme_setup() {
 }
 add_action('init', 'biro_theme_setup');
 
-/*
-			Registering control settings and  controls
-*/
-function biro_customize_register( $wp_customize ){
+/**
+ * Customize colors of header, backgound and footer.
+ */
+require get_template_directory() . '/inc/colors.php';
 
-/*
-			Add settings to controls
-*/
-	$wp_customize->add_setting('biro-header_background_color',
-		array(
-			'default'           =>  '#636363',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-	$wp_customize->add_setting('biro-footer_background_color',
-		array(
-			'default'           =>  '#636363',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-    $wp_customize->add_setting('biro-header_nav_text_color',
-		array(
-			'default'           =>  '#e5e5e5',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
 
-/*
-			Add controls
-*/
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize,'biro-header_background_color_control',
-			array(
-				'label'         => __( 'Header Background Color', 'biro' ),
-				'description'   => __( 'This is a header background color control, choose color and Save & Publish to take efect', 'biro' ),
-				'section'       => 'colors',
-				'settings'      => 'biro-header_background_color',
-			)
-		)
-	);
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize,'biro-footer_background_color_control',
-			array(
-				'label'         => __( 'Footer Background Color', 'biro' ),
-				'description'   => __( 'This is a footer background color control, choose color and Save & Publish to take efect', 'biro' ),
-				'section'       => 'colors',
-				'settings'      => 'biro-footer_background_color',
-			)
-		)
-	);
-    $wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize,'biro-header_nav_text_color_control',
-			array(
-				'label'         => __( 'Header Navigation Color', 'biro' ),
-				'description'   => __( 'This is a header navigation color control, choose color and Save & Publish to take efect', 'biro' ),
-				'section'       => 'colors',
-				'settings'      => 'biro-header_nav_text_color',
-			)
-		)
-	);
-
-}
-add_action('customize_register', 'biro_customize_register');
 
 
 function biro_customize_css_output(){   ?>

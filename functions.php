@@ -33,8 +33,6 @@ add_action('init', 'biro_theme_setup');
 require get_template_directory() . '/inc/colors.php';
 
 
-
-
 function biro_customize_css_output(){   ?>
 	<style type="text/css">
 

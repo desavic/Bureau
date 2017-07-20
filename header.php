@@ -26,11 +26,16 @@
             <div class="header-container">
                 <header class="header wrapper">
                     <div class="img-holder">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?> "><img src="<?php echo get_template_directory_uri() . '/img/Biro-100x50.png' ?>" alt="Biro logo"></a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?> ">
+                            <?php if ( function_exists( 'the_custom_logo' ) ) {
+                                        the_custom_logo();
+                                    } else  ?>
+                                        <img src="<?php echo get_template_directory_uri() . '/img/img_Biro-100x50.png' ?>" alt="Biro logo">
+                        </a>
                     </div>
                     <nav>
                         <?php wp_nav_menu( array(
-                            'theme_location'    => 'headnav',
+                            'theme_location'    => 'header_navigation',
                             'container'         => false,
                             'menu_class'        => 'nav navbar-nav navbar-right',
                         ) ); ?>

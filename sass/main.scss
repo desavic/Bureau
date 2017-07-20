@@ -117,7 +117,7 @@ nav {
 }
 nav ul{
     display: grid;
-    grid-template-columns: repeat(6, 100px );
+    grid-template-columns: repeat(6, auto );
     list-style: none;
     padding-left: 0px;
     margin-top: 22px;
@@ -126,6 +126,7 @@ nav ul li{
     text-align: center;
     /*font-size: 14px;*/
     font-family: 'Comfortaa', cursive; font-size: 12px;;
+    padding-right: 50px;
 }
 header>nav ul li a {
     text-decoration: none;

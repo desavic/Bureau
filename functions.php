@@ -25,7 +25,7 @@ require get_template_directory() . '/inc/function-customize-colors.php';
 	Registering theme functionality
 */
 function bureau_theme_setup() {
-	register_nav_menu( 'headnav', 'Primary Header Navigation' );
+	register_nav_menu( 'header_navigation', 'Primary Header Navigation' );
 }
 add_action('init', 'bureau_theme_setup');
 
@@ -36,3 +36,15 @@ function bureau_customization_live_preview() {
 	wp_enqueue_script('bureau_live_customizer', get_template_directory_uri() . '/js/bureau-customizer.js', array('jquery', 'customize-preview'), true );
 };
 add_action('customize_preview_init', 'bureau_customization_live_preview');
+// ---------------------------------------------
+function themename_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'Bireau', 'Opis sajta ispod logoa' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );

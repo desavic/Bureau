@@ -12,7 +12,7 @@
 */
 require get_template_directory() . '/inc/function-admin.php';
 /*
-  	Enqueue scripts.
+  	Enqueue theme scripts.
 */
 require get_template_directory() . '/inc/function-enqueue-scripts.php';
 

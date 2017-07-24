@@ -27,11 +27,18 @@
                 <header class="header wrapper">
                     <div class="img-holder">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?> ">
-                            <?php if ( function_exists( 'the_custom_logo' ) ) {
-                                        the_custom_logo();
-                                    } else  ?>
-                                        <img src="<?php echo get_template_directory_uri() . '/img/img_Biro-100x50.png' ?>" alt="Biro logo">
-                        </a>
+                            <img src="<?php
+                            $default_image = get_template_directory_uri() . '/img/img_Biro-100x50.png "></a>';
+                            if (function_exists('the_custom_logo')) {
+                                // if (!has_custom_logo()){
+                                //     echo $default_image ;
+                                // } else {
+                                    the_custom_logo();
+                                }
+                            // } else {
+                            //     echo $customimage ;
+                            // }
+ ?>
                     </div>
                     <nav>
                         <?php wp_nav_menu( array(

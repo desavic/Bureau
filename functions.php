@@ -1,6 +1,6 @@
 <?php
 /*
-@package bureau theme
+@package biro theme
 
     =======================
         FUNCTIONS PAGE
@@ -22,28 +22,35 @@ require get_template_directory() . '/inc/function-enqueue-scripts.php';
 require get_template_directory() . '/inc/function-customize-colors.php';
 
 /*
+  	Customize - trening fungcije kustomizacije admin strana, OBRISATI KASNIJE I OVAJ INCLUDE
+	i function-trening.php fajl !!!!!!!!!!!!!!!!!!!.
+*/
+require get_template_directory() . '/inc/function-trening.php';
+
+/*
 	Registering theme functionality
 */
-function bureau_theme_setup() {
+function biro_theme_setup() {
 	register_nav_menu( 'header_navigation', 'Primary Header Navigation' );
 }
-add_action('init', 'bureau_theme_setup');
+add_action('init', 'biro_theme_setup');
 
 /*
 	Live Customizer JS included
 */
-function bureau_customization_live_preview() {
-	wp_enqueue_script('bureau_live_customizer', get_template_directory_uri() . '/js/bureau-customizer.js', array('jquery', 'customize-preview'), true );
+function biro_customization_live_preview() {
+	wp_enqueue_script('biro_live_customizer', get_template_directory_uri() . '/js/biro-customizer.js', array('jquery', 'customize-preview'), true );
 };
-add_action('customize_preview_init', 'bureau_customization_live_preview');
+add_action('customize_preview_init', 'biro_customization_live_preview');
+
 // ---------------------------------------------
 function themename_custom_logo_setup() {
     $defaults = array(
-        'height'      => 100,
-        'width'       => 400,
+        'height'      => 60,
+        'width'       => 200,
         'flex-height' => true,
         'flex-width'  => true,
-        'header-text' => array( 'Bireau', 'Opis sajta ispod logoa' ),
+        'header-text' => array( 'site-title', 'site-description' ),
     );
     add_theme_support( 'custom-logo', $defaults );
 }
